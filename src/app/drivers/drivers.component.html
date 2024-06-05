@@ -1,0 +1,24 @@
+<h2>Driver List</h2>
+<button mat-raised-button color="primary" (click)="addDriver()">Add Driver</button>
+<table mat-table [dataSource]="drivers" class="mat-elevation-z8">
+  <ng-container matColumnDef="driverName">
+    <th mat-header-cell *matHeaderCellDef> Driver Name </th>
+    <td mat-cell *matCellDef="let driver"> {{driver.driverName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="phoneNumber">
+    <th mat-header-cell *matHeaderCellDef> Phone Number </th>
+    <td mat-cell *matCellDef="let driver"> {{driver.phoneNumber}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions </th>
+    <td mat-cell *matCellDef="let driver">
+      <button mat-button (click)="editDriver(driver.driverID)">Edit</button>
+      <button mat-button (click)="deleteDriver(driver.driverID)">Delete</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

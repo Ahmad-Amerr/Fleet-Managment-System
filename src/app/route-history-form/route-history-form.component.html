@@ -1,0 +1,49 @@
+<div>
+    <h2>Add Route History</h2>
+    <form [formGroup]="routeHistoryForm" (ngSubmit)="submitRouteHistory()">
+        <mat-form-field>
+            <mat-label>Vehicle</mat-label>
+            <mat-select formControlName="vehicleID">
+              <mat-option *ngFor="let vehicle of vehicles" [value]="vehicle.vehicleID">{{ vehicle.vehicleNumber }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Direction</mat-label>
+        <input matInput formControlName="vehicleDirection">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Status</mat-label>
+        <input matInput formControlName="status">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Speed</mat-label>
+        <input matInput formControlName="vehicleSpeed">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Time</mat-label>
+        <input matInput formControlName="epoch" type="number">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="address">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Latitude</mat-label>
+        <input matInput formControlName="latitude">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Longitude</mat-label>
+        <input matInput formControlName="longitude">
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Add Route History</button>
+    </form>
+  </div>
+  

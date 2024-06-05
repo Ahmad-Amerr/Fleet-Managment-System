@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>{{ isEditMode ? 'Edit Vehicle Information' : 'Add Vehicle Information' }}</h1>
+<div mat-dialog-content>
+  <form [formGroup]="vehicleInformationForm" class="vehicle-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Vehicle Number</mat-label>
+      <input matInput formControlName="vehicleNumber">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Vehicle Type</mat-label>
+      <input matInput formControlName="vehicleType">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Driver ID</mat-label>
+      <input matInput formControlName="driverID">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Vehicle Make</mat-label>
+      <input matInput formControlName="vehicleMake">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Vehicle Model</mat-label>
+      <input matInput formControlName="vehicleModel">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Purchase Date</mat-label>
+      <input matInput formControlName="purchaseDate" type="date">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="dialogRef.close()" class="cancel-button">Cancel</button>
+  <button mat-button (click)="save()" class="save-button">Save</button>
+</div>

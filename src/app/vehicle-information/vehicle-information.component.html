@@ -1,0 +1,9 @@
+<h1>Vehicle Information List</h1>
+<button mat-button (click)="addVehicleInformation()">Add Vehicle Information</button>
+<ul>
+  <li *ngFor="let vehicleInformation of vehicleInformations">
+    <span>{{ vehicleInformation.vehicleMake }} {{ vehicleInformation.vehicleModel }}</span>
+    <button mat-button (click)="editVehicleInformation(vehicleInformation.id)">Edit</button>
+    <button mat-button (click)="deleteVehicleInformation(vehicleInformation.id)">Delete</button>
+  </li>
+</ul>

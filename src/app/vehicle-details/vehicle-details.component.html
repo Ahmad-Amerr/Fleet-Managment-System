@@ -1,0 +1,59 @@
+<h1 mat-dialog-title>Vehicle Details</h1>
+<div mat-dialog-content class="vehicle-details-content">
+  <mat-list>
+    <mat-list-item class="vehicle-detail-item">
+      
+      <h4 matLine>Vehicle Number</h4>
+      <p matLine>{{ vehicleDetails.vehicleNumber }}</p>
+    </mat-list-item>
+
+    <mat-list-item class="vehicle-detail-item">
+
+      <h4 matLine>Vehicle Type</h4>
+      <p matLine>{{ vehicleDetails.vehicleType }}</p>
+    </mat-list-item>
+
+    <mat-list-item class="vehicle-detail-item">
+      <h4 matLine>Driver Name</h4>
+      <p matLine>{{ vehicleDetails.driverName }}</p>
+    </mat-list-item>
+
+    <mat-list-item class="vehicle-detail-item">
+      <h4 matLine>Phone Number</h4>
+      <p matLine>{{ vehicleDetails.phoneNumber }}</p>
+    </mat-list-item>
+
+    <mat-list-item class="vehicle-detail-item">
+      <h4 matLine>Last Position</h4>
+      <p matLine>{{ vehicleDetails.lastLatitude }}, {{ vehicleDetails.lastLongitude }}</p>
+    </mat-list-item>
+
+    <mat-list-item class="vehicle-detail-item">
+      <h4 matLine>Vehicle Make</h4>
+      <p matLine>{{ vehicleDetails.vehicleMake }}</p>
+    </mat-list-item>
+
+    <mat-list-item class="vehicle-detail-item">
+      <h4 matLine>Vehicle Model</h4>
+      <p matLine>{{ vehicleDetails.vehicleModel }}</p>
+    </mat-list-item>
+
+    <mat-list-item class="vehicle-detail-item">
+      <h4 matLine>Last GPS Time</h4>
+      <p matLine>{{ vehicleDetails.lastGPSTime }}</p>
+    </mat-list-item>
+
+    <mat-list-item class="vehicle-detail-item">
+      <h4 matLine>Last GPS Speed</h4>
+      <p matLine>{{ vehicleDetails.lastGPSSpeed }}</p>
+    </mat-list-item>
+
+    <mat-list-item class="vehicle-detail-item">
+      <h4 matLine>Last Address</h4>
+      <p matLine>{{ vehicleDetails.lastAddress }}</p>
+    </mat-list-item>
+  </mat-list>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>
